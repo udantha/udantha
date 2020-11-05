@@ -1,8 +1,8 @@
 <h1 align='center'> Hey! :wave:</h1>
 <p align='center'>
-I'm Udantha.
+Have an awesome day
 </p>
-<p align='center'>Got a question? Head over to <a href="https://twitter.com/udantha">Twitter</a>.</p>
+<p align='center'>Got a question? Head over to <a target="_blank" href="https://twitter.com/udantha">Twitter</a>.</p>
 
 <h1 align='center'><i>Stay awesome!</i></h1>
 <!--
