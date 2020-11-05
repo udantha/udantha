@@ -1,5 +1,10 @@
-### Hi there 👋
+<h1 align='center'> Hey! :wave:</h1>
+<p align='center'>
+I'm Udantha.
+</p>
+<p align='center'>Got a question? Head over to <a href="https://twitter.com/udantha">Twitter</a>.</p>
 
+<h1 align='center'><i>Stay awesome!</i></h1>
 <!--
 **udantha/udantha** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
