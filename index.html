@@ -2,17 +2,18 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
-      analytics_storage: 'denied',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
+      analytics_storage: 'granted',
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
     });
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('gtm_consent') === 'granted') {
+    var _cm = document.cookie.match('(^|;)\\s*gtm_consent=([^;]+)');
+    if (_cm && _cm[2] === 'denied') {
       gtag('consent', 'update', {
-        analytics_storage: 'granted',
-        ad_storage: 'granted',
-        ad_user_data: 'granted',
-        ad_personalization: 'granted',
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
       });
     }
   </script><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -30,20 +31,31 @@
         "https://www.linkedin.com/in/udantha/"
       ]
     }
-  </script><link rel="stylesheet" href="/_astro/index.KxsoGo4_.css"></head> <body data-astro-cid-b6shs5xj> <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M58P6XMG" height="0" width="0" style="display:none;visibility:hidden" data-astro-cid-b6shs5xj></iframe></noscript> <!-- End Google Tag Manager (noscript) --> <main data-astro-cid-b6shs5xj> <section data-astro-cid-b6shs5xj> <h1 data-astro-cid-b6shs5xj>Udantha Diyanath Pathirana</h1> <p class="tagline" data-astro-cid-b6shs5xj>Explorer of some sorts</p> <a href="https://stdout.udantha.com/about" class="cta" data-astro-cid-b6shs5xj>get to know personally</a> <p class="bio" data-astro-cid-b6shs5xj>
+  </script><link rel="stylesheet" href="/_astro/index.Bn6vnD4f.css"></head> <body data-astro-cid-b6shs5xj> <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M58P6XMG" height="0" width="0" style="display:none;visibility:hidden" data-astro-cid-b6shs5xj></iframe></noscript> <!-- End Google Tag Manager (noscript) --> <main data-astro-cid-b6shs5xj> <section data-astro-cid-b6shs5xj> <h1 data-astro-cid-b6shs5xj>Udantha Diyanath Pathirana</h1> <p class="tagline" data-astro-cid-b6shs5xj>Explorer of some sorts</p> <p class="blog-teaser" data-astro-cid-b6shs5xj>I write about programming, distributed systems, architecture, and whatever's on my mind
+<br data-astro-cid-b6shs5xj>on my blog, <strong data-astro-cid-b6shs5xj>stdout</strong>.</p> <a href="https://stdout.udantha.com" class="cta" data-astro-cid-b6shs5xj>&gt; read stdout</a> <p class="bio" data-astro-cid-b6shs5xj>
 Simplify, simplify and then.... simplify
-</p> <div class="dots" data-astro-cid-b6shs5xj>· · ·</div> <a class="email" href="https://www.linkedin.com/in/udantha/" data-astro-cid-b6shs5xj>@udantha</a> <a class="blog-link" href="https://stdout.udantha.com" data-astro-cid-b6shs5xj>&gt; stdout</a> </section> </main> <div id="consent-banner" data-astro-cid-b6shs5xj> <p data-astro-cid-b6shs5xj>This site uses cookies to understand how it's used.</p> <div class="consent-actions" data-astro-cid-b6shs5xj> <button id="consent-accept" data-astro-cid-b6shs5xj>Accept</button> <button id="consent-decline" data-astro-cid-b6shs5xj>Decline</button> </div> </div> <script>
+</p> <div class="dots" data-astro-cid-b6shs5xj>· · ·</div> <a class="email" href="https://www.linkedin.com/in/udantha/" data-astro-cid-b6shs5xj>@udantha</a> <a class="blog-link" href="https://stdout.udantha.com/about" data-astro-cid-b6shs5xj>get to know personally</a> </section> </main> <div id="consent-banner" data-astro-cid-b6shs5xj> <p data-astro-cid-b6shs5xj>This site uses cookies to understand how it's used.</p> <div class="consent-actions" data-astro-cid-b6shs5xj> <button id="consent-decline" data-astro-cid-b6shs5xj>Decline</button> <button id="consent-dismiss" data-astro-cid-b6shs5xj>Got it</button> </div> </div> <script>
     (function () {
+      var COOKIE = 'gtm_consent';
+      var DOMAIN = '.udantha.com';
+      var YEAR = 60 * 60 * 24 * 365;
+      function getCookie(name) {
+        var m = document.cookie.match('(^|;)\\s*' + name + '=([^;]+)');
+        return m ? m[2] : null;
+      }
+      function setCookie(name, value) {
+        document.cookie = name + '=' + value + '; max-age=' + YEAR + '; domain=' + DOMAIN + '; path=/; SameSite=Lax';
+      }
       var banner = document.getElementById('consent-banner');
-      if (localStorage.getItem('gtm_consent')) { banner.style.display = 'none'; return; }
+      if (getCookie(COOKIE)) { banner.style.display = 'none'; return; }
       banner.style.display = 'flex';
-      document.getElementById('consent-accept').addEventListener('click', function () {
-        localStorage.setItem('gtm_consent', 'granted');
-        gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
+      document.getElementById('consent-dismiss').addEventListener('click', function () {
+        setCookie(COOKIE, 'granted');
         banner.style.display = 'none';
       });
       document.getElementById('consent-decline').addEventListener('click', function () {
-        localStorage.setItem('gtm_consent', 'denied');
+        setCookie(COOKIE, 'denied');
+        gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
         banner.style.display = 'none';
       });
     })();
